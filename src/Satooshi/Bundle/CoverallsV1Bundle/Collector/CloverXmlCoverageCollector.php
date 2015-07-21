@@ -88,10 +88,6 @@ class CloverXmlCoverageCollector
     {
         $absolutePath = (string) ($file['path'] ?: $file['name']);
 
-        if (false === strpos($absolutePath, $root)) {
-            return null;
-        }
-
         if ($root !== DIRECTORY_SEPARATOR) {
             $filename = str_replace($root, '', $absolutePath);
         } else {
